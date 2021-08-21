@@ -1,0 +1,104 @@
+/* default settings to the root selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(46, 44, 45);
+}
+
+.keyboard {
+  background-color: gainsboro;
+  color: black;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) 1.2fr;
+  row-gap: 4px;
+  width: 350px;
+  padding: 1.5rem 0.6rem;
+  grid-gap: 8px;
+}
+
+/* class to be added when keys are in lower case */
+.lower {
+  text-transform: lowercase;
+}
+
+/* class to be added if keys are iin upper case */
+.upper {
+  text-transform: uppercase;
+}
+
+/* each key styling */
+.key {
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(7, 7, 7);
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+}
+
+.keyboard > div {
+  grid-gap: 5px 6px;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 10px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 0.3fr repeat(9, 1fr) 0.3fr;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: 1.41fr 0.1fr repeat(7, 1.1fr) 0.1fr 1.41fr;
+}
+
+/* this class is applied to row3 when user is viewing numbers or symbols on the keyboard */
+.row3-numbers {
+  display: grid;
+  grid-template-columns: 1.43fr 0.2fr repeat(5, 1fr) 0.2fr 1.43fr;
+}
+
+.row4 {
+  display: grid;
+  grid-template-columns: 0.6fr repeat(2, 1fr) 4fr 0.9fr 1.3fr;
+}
+
+/* this container is the one with two symbols below the keyboard */
+.symbols-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 8px;
+}
+
+/* symbols in the container */
+.symbols {
+  font-size: 1.5rem;
+}
+
+/* notch at the bottom of the keyboard */
+.underline {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  height: 0px;
+  border: 3px solid black;
+  border-radius: 2000px;
+  width: 35%;
+  place-self: center;
+}
